@@ -1,0 +1,73 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    font-family: "Lato";
+}
+
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#pageContents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+}
+
+nav {
+    animation: reveal 1s forwards ease-in;
+    animation-delay: 2s;
+
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    opacity: 0;
+}
+
+nav ul {
+    font-size: 1.3em;
+    font-weight: lighter;
+    text-align: right;
+    margin: 0;
+
+    li {
+        transition: transform 0.1s ease-in-out;
+    }
+
+    li:hover {
+        transform: scale(1.1);
+    }
+}
+
+.activeNav {
+    position: relative;
+}
+
+.activeNav::after {
+    content: "<";
+    margin-left: 0.5em;
+    position: absolute;
+}

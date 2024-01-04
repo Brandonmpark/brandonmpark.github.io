@@ -1,0 +1,70 @@
+#home {
+    h1 {
+        font-size: 3em;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        font-weight: lighter;
+        margin: 0;
+    }
+
+    width: 70%;
+
+    .reveal {
+        opacity: 0;
+        animation: reveal 1s forwards ease-in;
+        animation-delay: 1.2s;
+    }
+
+    #animateB {
+        display: inline-block;
+        animation: moveB 1s forwards ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+        color: #cba6f7;
+    }
+
+    #animateP {
+        animation: moveP 1s forwards ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+        display: inline-block;
+        color: #cba6f7;
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+
+    @keyframes moveB {
+        0% {
+            transform: translateX(2.3em)
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveP {
+        0% {
+            transform: translateX(-1em);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    user-select: none;
+}

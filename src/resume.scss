@@ -1,0 +1,185 @@
+#resume {
+    position: relative;
+    width: 70%;
+    height: 10em;
+
+    h1 {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    p,
+    li {
+        font-size: 0.8em;
+        font-weight: lighter;
+    }
+
+    li {
+        list-style: circle;
+        margin-left: 1em;
+    }
+
+    b {
+        font-weight: normal;
+    }
+
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+        position: absolute;
+
+        &#up {
+            top: -1.5em;
+            left: 50%;
+            transform: scale(1.1) translateX(-50%);
+            &:hover {
+                transform: scale(1.1) translateX(-50%) translateY(-0.2em);
+            }
+        }
+
+        &#down {
+            bottom: -1.5em;
+            left: 50%;
+            transform: scale(1.1) translateX(-50%);
+            &:hover {
+                transform: scale(1.1) translateX(-50%) translateY(0.2em);
+            }
+        }
+
+        &#left {
+            left: -1.5em;
+            top: 50%;
+            transform: scale(1.1) translateY(-50%);
+            &:hover {
+                transform: scale(1.1) translateY(-50%) translateX(-0.2em);
+            }
+        }
+
+        &#right {
+            right: -1.5em;
+            top: 50%;
+            transform: scale(1.1) translateY(-50%);
+            &:hover {
+                transform: scale(1.1) translateY(-50%) translateX(0.2em);
+            }
+        }
+
+        &.inactive {
+            display: none;
+        }
+    }
+
+    i {
+        font-size: 1.3em;
+        margin-right: 0.2em;
+        margin-top: 0.2em;
+        display: inline-block;
+        position: relative;
+
+        &:hover::after {
+            content: attr(title);
+            font-size: 0.8em;
+            top: 1em;
+            left: 0px;
+            font-family: "Lato";
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: #f4f4f4;
+            z-index: 1;
+            border: 1px solid black;
+            padding: 0.2em;
+            border-radius: 4px;
+        }
+    }
+    .down-enter {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .down-enter-active {
+        transform: translateY(0);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .down-exit {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    .down-exit-active {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .up-enter {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .up-enter-active {
+        transform: translateY(0);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .up-exit {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    .up-exit-active {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .right-enter {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .right-enter-active {
+        transform: translateX(0);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .right-exit {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    .right-exit-active {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+
+    .left-enter {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .left-enter-active {
+        transform: translateX(0);
+        transition: transformopacity 300ms ease-in-out;
+    }
+
+    .left-exit {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    .left-exit-active {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform opacity 300ms ease-in-out;
+    }
+}

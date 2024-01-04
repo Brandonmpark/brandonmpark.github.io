@@ -1,0 +1,22 @@
+#contact {
+    width: 70%;
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+            width: 3em;
+            height: 3em;
+        }
+
+        li {
+            transition: transform 0.1s ease-in-out;
+        }
+        
+        li:hover {
+            transform: scale(1.1);
+        }
+    }
+}
